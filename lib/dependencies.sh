@@ -32,7 +32,7 @@ yarn_node_modules() {
   cd "$build_dir"
 echo "EN $NODE_ENV $build_dir"
 ls -al node_modules || echo "NOPE"
-  yarn install --pure-lockfile --ignore-engines 2>&1
+  NODE_ENV=development yarn install --pure-lockfile --ignore-engines 2>&1
 ls -al node_modules || echo "NOPE"
 }
 
