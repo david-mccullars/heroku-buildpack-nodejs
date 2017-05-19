@@ -127,6 +127,9 @@ restore_cache() {
   else
     echo "Skipping cache restore ($cache_status)"
   fi
+  ls -al $BUILD_DIR
+  ls -al $BUILD_DIR/node_modules
+  /bin/true
 }
 
 header "Restoring cache"
