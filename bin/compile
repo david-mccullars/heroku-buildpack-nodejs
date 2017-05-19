@@ -129,6 +129,7 @@ restore_cache() {
   fi
   ls -al $BUILD_DIR
   ls -al $BUILD_DIR/node_modules || echo "NO node_modules"
+  ls -al $BUILD_DIR/node_modules/.bin || echo "NO node_modules/.bin"
 }
 
 header "Restoring cache"
