@@ -137,8 +137,8 @@ restore_cache | output "$LOG_FILE"
 build_dependencies() {
   run_if_present 'heroku-prebuild'
   if $YARN; then
+    echo "BEFORE YARN INSTALL $NODE_ENV"
     yarn_node_modules "$BUILD_DIR"
-    echo "AFTER YARN INSTALL $NODE_ENV"
     ls -al $BUILD_DIR
     ls -al $BUILD_DIR/node_modules || echo "NO node_modules"
   elif $PREBUILD; then
