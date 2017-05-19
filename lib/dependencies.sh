@@ -30,7 +30,10 @@ yarn_node_modules() {
 
   echo "Installing node modules (yarn.lock)"
   cd "$build_dir"
+echo "EN $NODE_ENV $build_dir"
+ls -al node_modules || echo "NOPE"
   yarn install --pure-lockfile --ignore-engines 2>&1
+ls -al node_modules || echo "NOPE"
 }
 
 npm_node_modules() {
